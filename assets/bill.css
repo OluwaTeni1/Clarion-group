@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-1: #FFCC01;
+    --color-2: #000000;
+    --color-3: #fff;
+}
+
+
+.bills {
+    background: url(images/logistics-services.jpg) no-repeat;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+}
+
+.box-bill a  {
+    font-size: 24px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #FFCC01;
+    padding: 10px;
+    background: #fff;
+    border: 2px solid #FFCC01;
+    transition: .25s;
+}
+
+.box-bill a:hover{
+    background: #FFCC01;
+    color: #fff;
+}
