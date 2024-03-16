@@ -58,6 +58,54 @@ nav{
     gap: 1.5rem;
 }
 
+
+
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: var(--color-1);
+    
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: rgba(54, 54, 54, 0.2);
+    color: #ffe789;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(72, 72, 72, 0.6);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 .nav-menu li a{
     color: var(--color-1);
     font-size: 14px;
@@ -114,7 +162,20 @@ nav{
         transition: all 0.2s;
         pointer-events: none;
     }
+        .dropdown-content {
+            position: relative;
+            max-width: 120px;
+            left: 150px;
+        }
 
+        .dropdown-content a {
+            float: right;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: right;
+        }
         .nav-menu {
             position: absolute;
             top: 100%;
@@ -493,10 +554,13 @@ hr{
 /*-----terminal-------*/
 
 .terminal-box{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 200px;
-    gap: 1rem;
+    gap: .5rem;
     align-items: center;
     text-align: center;
     justify-content: space-around;
@@ -532,7 +596,24 @@ hr{
     font-weight: 600;
 }
 
+.terminal-head{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.terminal-head h3{
+    font-size: 18px;
+    color: #000;
+}
 /*-----contact-----*/
+.contact{
+    width: 100%;
+    background: linear-gradient(to right, #ccc, #ffe789);
+}
 .contact-cont{
     width: 80%;
     display: flex;
@@ -543,6 +624,7 @@ hr{
     justify-content: space-between;
     gap: 2rem;
     flex: 1 1 500px;
+    background: linear-gradient(to right, #ececec, #fff7d7);
     box-sizing: border-box;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
 }
@@ -562,7 +644,7 @@ hr{
     justify-content: flex-end;
     height: 200px;
     margin-bottom: 1.5rem;
-    background: rgb(235, 235, 235);
+    background: rgb(205, 205, 205);
     border: none;
     padding: 20px;
     border-radius: 10px;
