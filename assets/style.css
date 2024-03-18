@@ -723,6 +723,11 @@ input[type=submit]:hover{
     color: #fff;
 }
 
+input::placeholder,
+textarea::placeholder{
+    color: #fff;
+}
+
 section.footer{
     background: #4c4c4c;
     padding: 2rem 0 1rem;
