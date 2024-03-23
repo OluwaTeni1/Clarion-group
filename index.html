@@ -141,6 +141,14 @@
                     slide[current].style.display = 'block';
                 }
                 start();
+
+
+                            document.querySelectorAll('.terminal-box img').forEach(image =>{
+                            image.onClick = () => {
+                                document.querySelector('.popup-img').style.display = 'block';
+                                document.querySelector('.popup-img img').src = image.getAttribute('src')
+                            }
+                        });
             </script>
     </section>
 
@@ -465,65 +473,63 @@
                 <h3>Alakija Lagos Terminal</h3>
             </div>
             <div class="terminal-box">
-                <div class="card-3">
                     <div class="img-3">
                         <img src="assets/images/alakija-1.jpg" alt="">
                     </div>
-                </div>
-                <div class="card-3">
                     <div class="img-3">
                         <img src="assets/images/alakija-2.jpg" alt="">
                     </div>
-                </div>
-                <div class="card-3">
                     <div class="img-3">
                         <img src="assets/images/alakija-3.jpg" alt="">
                     </div>
-                </div>
-                <div class="card-3">
                     <div class="img-3">
                         <img src="assets/images/alakija-4.jpg" alt="">
                     </div>
-                </div>
             </div>
             <div class="terminal-head">
                 <h3>Maza-Maza Lagos Terminal</h3>
             </div>
             <div class="terminal-box">
-                <div class="card-3">
+                
                     <div class="img-3">
                         <img src="assets/images/maza-maza.jpg" alt="">
                     </div>
                     
-                </div>
+                
             </div>
             <div class="terminal-head">
                 <h3>Onitsha River Port Terminal</h3>
             </div>
             <div class="terminal-box">
-                <div class="card-3">
+                
                     <div class="img-3">
                         <img src="assets/images/onitsha-2.jpg" alt="">
                     </div>
-                    
-                </div>
-            
-            
-                <div class="card-3">
                     <div class="img-3">
                         <img src="assets/images/onitsha-3.jpg" alt="">
                     </div>
-                    
-                </div>
-
-                <div class="card-3">
                     <div class="img-3">
                         <img src="assets/images/ontisha-1.jpg" alt="">
                     </div>
                     
-                </div>
+                
+            </div>
+            <div class="popup-img">
+                <span>&times;</span>
+                <img src="assets/images/onitsha-2.jpg" alt="">
             </div>
         </div>
+        <script>
+            document.querySelectorAll('.terminal-box img').forEach(image => {
+                image.onclick = () => {
+                    document.querySelector('.popup-img').style.display = 'block';
+                    document.querySelector('.popup-img img').src = image.getAttribute('src');
+                }
+            });
+            document.querySelector('.popup-img span').onclick = () => {
+                document.querySelector('.popup-img').style.display = 'none';
+            }
+        </script>
     </section>
 
     <section class="contact" id="contact">
@@ -576,5 +582,7 @@
             </div>
         </div>
     </section>
+
+    
 </body>
 </html>

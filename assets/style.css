@@ -564,15 +564,10 @@ hr{
     align-items: center;
     text-align: center;
     justify-content: space-around;
+    margin-bottom: 3rem;
 }
 
-.card-3{
-    width: 280px;
-    height: 340px;
-    border: none;
-    align-items: center;
-    text-align: center;
-}
+
 
 .img-3{
     width: 240px;
@@ -580,22 +575,62 @@ hr{
     margin: auto;
     box-sizing: border-box;
     border-radius: 50%;
+    border: 2px solid var(--color-1);
+    cursor: pointer;
+    transition: .35s ease;
 }
 
 .img-3 img{
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    
     object-fit: cover;
     object-position: center;
+    transition: .35s linear;
+}
+.img-3:hover img{
+    transform: scale(0.959);
+    opacity: 0.75;
 }
 
-.card-3 p{
-    padding: 20px;
-    font-size: 18px;
-    font-weight: 600;
+.terminal-home .popup-img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
 }
 
+.terminal-home .popup-img span{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+}
+
+.terminal-home .popup-img img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid var(--color-1);
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+    height: 550px;
+}
+@media (max-width:760px){
+    .terminal-home .popup-img img{
+        width: 95%;
+    }
+}
 .terminal-head{
     width: 100%;
     margin-left: auto;
@@ -606,8 +641,10 @@ hr{
     padding: 20px;
 }
 .terminal-head h3{
-    font-size: 18px;
-    color: #000;
+    font-size: 20px;
+    color: #353535;
+    
+    text-transform: uppercase;
 }
 /*-----contact-----*/
 .contact{
