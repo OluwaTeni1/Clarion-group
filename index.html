@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Clarion Shipping Off Dock</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="">
+                    &nbsp; Clarion Group
+                </a>
+            </div>
+            <input type="checkbox" name="" id="menu">
+            <label for="menu"><i class='bx bx-menu' id="menu-icon"></i></label>
+            <div class="nav-menu" id="navMenu">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#management">People</a></li>
+                <li><a href="partner.html">Venture Partnership</a></li>
+                <li>
+                    <div class="dropdown">
+                        <p class="dropbtn">Bill of Lading
+                            <i class="fa fa-caret-down"></i>
+                        </p>
+                        <div class="dropdown-content">
+                            <a href="SAMPLE_BILL_OF_LADING_LAG_18_R.pdf" download="">Bill of Lading Lagos</a>
+                            <a href="SAMPLE_BILL_OF_LADING_ONITSHA_18_R.pdf" download="">Bill of Lading Onitsha</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="https://portal.office.com/" target="_blank">Email</a></li>
+                <li><a href="#terminal">Terminal</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </div>
+            
+        </nav>
+    </header>
+    
+    
+    <section class="home">
+        <div class="home-pg">
+            <div class="arrow l" onclick="prev()">
+                <img src="assets/images/l.png" alt="l">
+            </div>
+            <div class="slide slide-1">
+                <div class="slide-overlay">
+                <div class="caption">
+                    <h1>Terminal Services</h1>
+                </div>
+                </div>
+            </div>
+            <div class="slide slide-2">
+                <div class="slide-overlay">
+                <div class="caption">
+                    <h1>Shipping Services</h1>
+                    
+                </div>
+                </div>
+            </div>
+            <div class="slide slide-3">
+                <div class="slide-overlay">
+                <div class="caption">
+                    <h1>Logistics Services</h1>
+                    
+                </div>
+            </div>
+            </div>
+            <div class="slide slide-4">
+                <div class="slide-overlay">
+                <div class="caption">
+                    <h1>Warehousing Services</h1>
+            
+                </div>
+                </div>
+            </div>
+            <div class="arrow r" onclick="next()">
+                <img src="assets/images/r.png" alt="l">
+            </div>
+        </div>
+            <script>
+                let slide = document.querySelectorAll('.slide');
+                var current = 0;
+
+                function cls() {
+                    for (let i = 0; i < slide.length; i++) {
+                        slide[i].style.display = 'none';
+                    }
+                }
+
+                function next(){
+                    cls();
+                    if(current === slide.length-1) current = -1;
+                    current++;
+
+                    slide[current].style.display = 'block';
+                    slide[current].style.opacity = 0.4;
+
+                    var x = 0.4;
+                    var intX = setInterval(function(){
+                        x+=0.1;
+                        slide[current].style.opacity = x;
+                        if (x >= 1) {
+                            clearInterval(intX);
+                            x = 0.4;
+                        }
+                    }, 100)
+                }
+
+                function prev() {
+                        cls();
+                        if (current === 0) current = slide.length;
+                        current--;
+
+                        slide[current].style.display = 'block';
+                        slide[current].style.opacity = 0.4;
+
+                        var x = 0.4;
+                        var intX = setInterval(function () {
+                            x += 0.1;
+                            slide[current].style.opacity = x;
+                            if (x >= 1) {
+                                clearInterval(intX);
+                                x = 0.4;
+                            }
+                        }, 100)
+                    }
+
+                function start() {
+                    cls();
+                    slide[current].style.display = 'block';
+                }
+                start();
+
+            </script>
+    </section>
+
+    <section class="services" id="services">
+        <div class="services-pg container">
+            <h2>Services</h2>
+            <div class="services-box">
+                <div class="card">
+                    <div class="img-box">
+                        <img src="assets/images/warehouse.jpg" alt="">
+                    </div>
+                    <div class="dsscr">
+                        <h3>Warehousing</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="assets/images/main-1.jpg" alt="">
+                    </div>
+                    <div class="dsscr">
+                        <h3>Logistics</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="assets/images/articles-2.jpg" alt="">
+                    </div>
+                    <div class="dsscr">
+                        <h3>Haulage</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="assets/images/4-0x0.jpg" alt="">
+                    </div>
+                    <div class="dsscr">
+                        <h3>Ship Agents</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="assets/images/custom-brokerage.jpg" alt="">
+                    </div>
+                    <div class="dsscr">
+                        <h3>Customs Brokerage</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="assets/images/1-0x0.jpg" alt="">
+                    </div>
+                    <div class="dsscr">
+                        <h3>Freight Forwarding</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="assets/images/form-m.jpg" alt="">
+                    </div>
+                    <div class="dsscr">
+                        <h3>Form-M/PAAR Management</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="assets/images/export-processing.jpg" alt="">
+                    </div>
+                    <div class="dsscr">
+                        <h3>Export Processing</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="assets/images/cargo-consolidation.jpg" alt="">
+                    </div>
+                    <div class="dsscr">
+                        <h3>Cargo Consolidation</h3>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about-us">
+        <div class="about-overlay">
+            <div class="about-us container">
+                <h2>About Us</h2>
+                <p>Clarion Off-Dock Terminal operates as a bonded facility which currently serves SALLAUM LINE, FIVE STAR,CMA-CGM,
+                MAERSKLINE, LANSAL and other shipping lines to reduce their Vessel waiting time, improve space management and ensure
+                swift turn-around times for shipping operations. The terminal is fully operational with all facilities that make it a
+                one-stop Customs off-dock Terminal in Nigeria. Apart from our well experienced staff with adequate shipping skills, we
+                are strategically positioned for all port operations. With all the facilities in our shipping company and Terminal, it
+                will be combined to serve our clients and partners well to ensure that vessels waiting time is drastically reduced even
+                during port congestion period. Clarion Bonded Terminal is an international logistics firm, and a member of the Clarion
+                group of companies, a dynamic and innovative company relying on people, processes and technology to provide superior
+                services to our customers. As the name implies Clarion off-dock is a Custom Bonded Inland Cargo Terminal, located within
+                the vicinity of Tincan Island Port. With its capacity of about 6000 tiues, the terminal is highly invaluable to the
+                policy drive of the Federal Government of Nigeria of making the Lagos Ports the hub of shipping in West Africa through
+                ensuring an efficient turn around time for vessels. Clarions expertise is laid on a world class efficient IT system,
+                efficient use of vehicle carriers to ensure improved safety, a reliable and proactive international network and a close
+                relationship with the major operators of the international transportation. We are a world class logistics provider.
+                Clarion off-dock Terminal jointly with the Nigeria Customs Service and the Nigeria Port Authority and other stakeholders
+                provide warehousing and logistics solutions to corporate and individual customers. As member of the Clarion Group, we
+                also provide end - to - end logistics solutions and support. We have invested heavily in our people, processes and
+                technology to ensure that we provide excellent and unparalleled service delivery to our customers. A member of the
+                Clarion Group, we are in a position to make the most of our experience and our network to continue to deliver
+                high-quality services and logistics solutions.</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="clients" id="clients">
+        <div class="client container">
+            <h2>Clients</h2>
+            <div class="client-box">
+                <div class="card-1">
+                    <p class="special">Bell X Telecomms</p>
+                </div>
+                <div class="card-1">
+                    <div class="img-1">
+                        <img src="assets/images/capital.png" alt="">
+                    </div>
+                    <hr>
+                    <p>Capital Oil and Gas</p>
+                </div>
+                <div class="card-1">
+                    <div class="img-1">
+                        <img src="assets/images/CFAO-removebg-preview.png" alt="">
+                    </div>
+                    <hr>
+                    <p>CFAO Nigeria Plc</p>
+                </div>
+                <div class="card-1">
+                    <div class="img-1">
+                        <img src="assets/images/CCECC-removebg-preview.png" alt="">
+                    </div>
+                    <hr>
+                    <p>CCECC</p>
+                </div>
+                <div class="card-1">
+                    <div class="img-1">
+                        <img src="assets/images/china-railway.png" alt="">
+                    </div>
+                    <hr>
+                    <p>China Railway</p>
+                </div>
+                <div class="card-1">
+                    <div class="img-1">
+                        <img src="assets/images/coscharis.png" alt="">
+                    </div>
+                    <hr>
+                    <p>Coscharis Motors</p>
+                </div>
+                <div class="card-1">
+                    <div class="img-1">
+                        <img src="assets/images/dangote-removebg-preview.png" alt="">
+                    </div>
+                    <hr>
+                    <p>Dangote Group of Companies</p>
+                </div>
+                <div class="card-1">
+                    <div class="img-1">
+                        <img src="assets/images/lanre-removebg-preview.png" alt="">
+                    </div>
+                    <hr>
+                    <p>Lanre Shittu Motors</p>
+                </div>
+                <div class="card-1">
+                    <p class="special">NCWTC</p>
+                </div>
+                <div class="card-1">
+                    <div class="img-1">
+                        <img src="assets/images/peace_transit-removebg-preview.png" alt="">
+                    </div>
+                    <hr>
+                    <p>Peace Mass Transit Ltd</p>
+                </div>
+                <div class="card-1">
+                    <div class="img-1">
+                        <img src="assets/images/download (1).png" alt="">
+                    </div>
+                    <hr>
+                    <p>Seaforce Shipping</p>
+                </div>
+                <div class="card-1">
+                    <div class="img-1">
+                        <img src="assets/images/tata-icon.png" alt="">
+                    </div>
+                    <hr>
+                    <p>TATA Nigeria</p>
+                </div>
+                <div class="card-1">
+                    <p class="special">Tezibon Engineering</p>
+                </div>
+                <div class="card-1">
+                    <div class="img-1">
+                        <img src="assets/images/images__3_-removebg-preview.png" alt="">
+                    </div>
+                    <hr>
+                    <p>UBA</p>
+                </div>
+                <div class="card-1">
+                    <div class="img-1">
+                        <img src="assets/images/ZENON-removebg-preview.png" alt="">
+                    </div>
+                    <hr>
+                    <p>Zenon Petroleum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="management" id="management">
+        <div class="management-home">
+            <div class="management-overlay">
+            <div class="management-cont container">
+            <h2>Management</h2>
+            <div class="mgnt-box">
+                <div class="card-2">
+                    <div class="details-head">
+                        <h3 class="details">Innocent Eloka</h3>
+                        <p class="p-1">President</p>
+                    </div>
+                    <div class="details-box">
+                        <p class="p-2">
+                            Mr Innocent is a fellow of the Institute of Chartered Accountants of Nigeria and the chartered taxation Institute of
+                            Nigeria. He holds a Master of Business Administration from Bayero University Kano. He is a trained system auditor of the
+                            International standard organization. He has extensive working experiences including, 10 years with Pannell Kerr Forster,
+                            an international firm of chartered accountants, reaching the position of senior audit manager; 5 years as Financial
+                            Controller Of Swissco (Sandoz Pharmaceuticals Nigeria), a foremost international pharmaceutical company and lecturer,
+                            Bayero University Kano. Mr Eloka was Vice President Abuja Chamber of Commerce between 1999 and 2003. He is a leading
+                            financial and Maritime consultant.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-2">
+                    <div class="details-head">
+                        <h3 class="details">Bernadine Ifeoma Eloka</h3>
+                        <p class="p-1">Vice President</p>
+                    </div>
+                    <div class="details-box">
+                        <p class="p-2">
+                        Bernadine is a seasoned Chartered Accountant, exceptionally gifted and upwardly mobile. She is a logistics and supply
+                        chain management expert and a Chartered Arbitrator with a modern and aggressive outlook and a flair for excellence. She
+                        has the commitment to add value to any organization. She is a graduate of the University of Lagos, Bayero University,
+                        Kano as well as Obafemi Awolowo University Ile Ife in pursuit of different courses of study.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-2">
+                    <div class="details-head">
+                        <h3 class="details">Frank Okocha</h3>
+                        <p class="p-1">Director Administration and Security</p>
+                    </div>
+                    <div class="details-box">
+                        <p class="p-2">
+                            Mr. Okocha has more than 25 years experience in the Maritime Industry. He holds a Master's degree in Transport Planning
+                            majoring in Maritime Transport and a post graduate Diploma in the same discipline. He serves as a fellow at the Nigeria
+                            Institute of Shipping. An Associate Member of the Chartered Institute of Logistics and Transport in Nigeria. He is also
+                            a Registered Freight Forwarder. Prior to joining Clarion Shipping, he worked at Nigeria Customs Service and
+                            Multi-freight Nigeria Ltd. Mr Okocha ia a member of the WHO'S WHO Historical Society having been listed in 2013 edition
+                            of International WHO'S WHO of professionals.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-2">
+                    <div class="details-head">
+                        <h3 class="details">Uzoamaka Onwuha</h3>
+                        <p class="p-1">Financial Controller</p>
+                    </div>
+                    <div class="details-box">
+                        <p class="p-2">
+                        With nearly two decades of diverse experience in finance and accounting roles spanning multiple industries, Amaka is a
+                        seasoned professional known for her expertise and leadership in financial management. She earned her BSc in Accounting
+                        from Abia State University, Uturu, and completed her MBA in Management at the University of Nigeria, Nsukka.
+                        
+                        Prior to joining Clarion Shipping West Africa Limited, Amaka held various managerial positions, including Head of
+                        Accounts, Finance and Accounts Manager, and Chief Accountant, across sectors such as hospitality, oil and gas, and
+                        manufacturing.
+                        
+                        She is a distinguished Fellow of the Institute of Chartered Accountants (FCA), an Associate of the Chartered Institute
+                        of Taxation (ACTI), an Associate Chartered Accountant (ACA) with the Institute of Chartered Accountants of Nigeria
+                        (ICAN), and an Associate Chartered Professional Manager with the Nigeria Institute of Management (NIM).
+                        
+                        Amaka's exceptional academic background, coupled with her array of professional certifications and extensive practical
+                        experience, positions her as a valuable asset capable of driving financial excellence and contributing significantly to
+                        organizational success. Her strategic mindset and adeptness in navigating complex financial landscapes underscore her
+                        ability to deliver sustainable results.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-2">
+                    <div class="details-head">
+                        <h3 class="details">Mustafa Mohammed</h3>
+                        <p class="p-1">Managing Director</p>
+                    </div>
+                    <div class="details-box">
+                        <p class="p-2">
+                        He holds a Diploma in Technical Contruction, 2nd Officer - Marine Engineer on Board Vessel and Container/ Oil Vessels /
+                        General Cargo. Mohammed is an expert in General Terminal Operation, Vessel and Yard Operations. He's also specialized in
+                        Lashing and Heavy Duty equipment. Before joining Clarion Shipping WA LTD, he served as Terminal manager for Ports and
+                        Cargo Handling Services Limited. Following, he worked as Shift Manager at APM Terminals Limited, Apapa Lagos, Shift
+                        Manager (Resource) SOGESTER in Angola and Shift Manager(Resource) MPS, Meridain Port Services Ltd, Ghana. He also served
+                        in Egypt with SCCT as Lashing / Vessel and Yard Supervisor. He has numerous certifications and awards to his name,
+                        notable as a Professional Experience ACADEMY’S AWARDEE receivinig RECOGNITION in 2012/2013 as The Terminal Manager of
+                        the Year.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="terminal" id="terminal">
+        <div class="terminal-home container">
+            <h2>Our Terminals</h2>
+            <div class="terminal-head">
+                <h3>Alakija Lagos Terminal</h3>
+            </div>
+            <div class="terminal-box">
+                    <div class="img-3">
+                        <img src="assets/images/alakija-1.jpg" alt="">
+                    </div>
+                    <div class="img-3">
+                        <img src="assets/images/alakija-2.jpg" alt="">
+                    </div>
+                    <div class="img-3">
+                        <img src="assets/images/alakija-3.jpg" alt="">
+                    </div>
+                    <div class="img-3">
+                        <img src="assets/images/alakija-4.jpg" alt="">
+                    </div>
+            </div>
+            <div class="terminal-head">
+                <h3>Maza-Maza Lagos Terminal</h3>
+            </div>
+            <div class="terminal-box">
+                
+                    <div class="img-3">
+                        <img src="assets/images/maza-maza.jpg" alt="">
+                    </div>
+                    
+                
+            </div>
+            <div class="terminal-head">
+                <h3>Onitsha River Port Terminal</h3>
+            </div>
+            <div class="terminal-box">
+                
+                    <div class="img-3">
+                        <img src="assets/images/onitsha-2.jpg" alt="">
+                    </div>
+                    <div class="img-3">
+                        <img src="assets/images/onitsha-3.jpg" alt="">
+                    </div>
+                    <div class="img-3">
+                        <img src="assets/images/ontisha-1.jpg" alt="">
+                    </div>
+                    
+                
+            </div>
+            <div class="popup-img">
+                <span>&times;</span>
+                <img src="assets/images/onitsha-2.jpg" alt="">
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.terminal-box img').forEach(image => {
+                image.onclick = () => {
+                    document.querySelector('.popup-img').style.display = 'block';
+                    document.querySelector('.popup-img img').src = image.getAttribute('src');
+                }
+            });
+            document.querySelector('.popup-img span').onclick = () => {
+                document.querySelector('.popup-img').style.display = 'none';
+            }
+        </script>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-us container">
+            <h2>Contact Us</h2>
+            <div class="contact-cont">
+                <div class="card-4">
+                <div class="card-4-1">
+                    <div class="icon">
+                        <i class='bx bxs-phone-call'></i>
+                    </div>
+                    <p>08030650855</p>
+                    <p>09084544899</p>
+                    <p>09079617415</p>
+                </div>
+                <div class="card-4-1">
+                    <div class="icon">
+                        <i class='bx bxs-location-plus'></i>
+                    </div>
+                    <p>KM 11, Old Ojo Road, Alakija, Lagos</p>
+                </div>
+                </div>
+                <div class="card-5">
+                    <div class="form">
+                        <p>Get in touch</p>
+                        <form action="">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="E-mail address" required>
+                            <textarea name="problem" id="" cols="20" rows="10" placeholder="Message"></textarea>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer-sec container">
+            <div class="foot">
+                <div class="foot-logo">
+                    <a href="#" class="">
+                        <img src="assets/images/logo.png" alt="">
+                        Clarion Group
+                    </a>
+                </div>
+                <div class="copy">
+                    Copyright &#x24B8; 2024
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>
