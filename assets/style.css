@@ -17,7 +17,7 @@
 }
 
 .container{
-    width: 80%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -55,7 +55,7 @@ nav{
 
 .nav-menu{
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 
@@ -66,7 +66,6 @@ nav{
     border: none;
     outline: none;
     color: var(--color-1);
-    
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -280,17 +279,38 @@ nav{
     color: #fff;
     text-align: center;
     font-size: 50px;
-    padding: 50px;
+    padding: 0px 50px;
 }
 
 .caption p{
     max-width: 600px;
     width: 90%;
     margin: 0px auto;
-    color: #ccc;
+    color: #fff5cf;
     text-align: center;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 23px;
+    text-transform: uppercase;
     line-height: 1.5em;
+    padding: 5px;
+}
+
+.caption p a{
+    color: #ffffff;
+    background: #ad8a00;
+    padding: 5px;
+    border: 1.5px #fff solid;
+    max-width: 600px;
+    width: 40%;
+    margin-left: auto;
+    text-align: center;
+    font-size: 17px;
+    transition: .25s ease-in-out;
+    text-transform: uppercase;
+}
+.caption p a:hover{
+    
+    background: #dfb300;
 }
 
 .arrow {
